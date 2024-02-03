@@ -1,7 +1,7 @@
-This is a support repository for the Yii framework support IntelliJ plugin.
-If you found a bug or want some functionality, please post an issue.
-
-Features of the plugin
+This is a support repository for the Yii framework support IntelliJ plugin.  
+If you found a bug or want some functionality, please post an issue.  
+  
+Features of the plugin  
 --------
 
 ### Views
