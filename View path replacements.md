@@ -17,7 +17,7 @@ Similar whay it works with aliases. There is build in @app alias that points to 
 Often we have different applications in different fodlers, for example backend and frontend.
 You can redefine @app alias, but only one in current implementation. To solve this problem you can use different aliases for applications, for exampel @frontend and @backend
 
-*Examples:*
+### Examples:
 
 * Your models located not in views folder but modules/views.
 Replacement: /views;/modules/views
