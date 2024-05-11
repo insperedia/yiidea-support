@@ -1,35 +1,36 @@
 # View path replacements
 
-View path repalcements helps plugin to find path to views calculated during runtime. 
-There following cases when it can be used:
+View path replacements help the plugin to find paths to views calculated during runtime. 
+There are the following cases when it can be used:
 * Themes
 * Aliases
-* Non standart project structure
+* Non-standard project structure
 
-To add replacement go to plugin settings in sections Views > View replacments. 
-Replacement consists of two values, "Path to be replaces" and "Replacements path".
-Plugin then simple replace part of the path from Path to be replaces.
-"Replacement path" if the path from root of project. 
-You can unserstand what replacement you need to create by looking error message when plugin can not find view.
+Use plugin settings in sections Views > View replacements to add a replacement. 
+The replacement consists of two values, "Path to be replaced" and "Replacements path".
+The plugin simply replaces part of the path from Path to be replaced.
+"Replacement path" is the path from the root of the project. 
+Looking at the error message when the plugin cannot find the view can help you understand what replacement you need to create.
 
 ### Aliases
-Similar whay it works with aliases. There is build in @app alias that points to root of project. 
-Often we have different applications in different fodlers, for example backend and frontend.
-You can redefine @app alias, but only one in current implementation. To solve this problem you can use different aliases for applications, for exampel @frontend and @backend
+Similarly, it works with aliases; the plugin replaces @alias with the path in the "Replacement path."
+Often, we have different applications in different folders, for example, backend and frontend.
+You can redefine @app alias, but only one in the current implementation. To solve this problem you can use different aliases for applications, for example, @frontend and @backend
+There is a built-in @app alias that points to the root of the project. 
 
 ### Examples:
 
-* Your models located not in views folder but modules/views.
+* Your models are located not in the views folder but in modules/views.
 Replacement: /views;/modules/views
 
 * Themes
 /views;/themes/basic
 
 * Aliases
-Imagine you have frontend and backend applciation. You can create following replacements.
+Imagine you have frontend and backend applications. You can create the following replacements.
 @frontend;/frontend
 @backend;/backend
 @app;/frontend
 
-Uunfortunatly in current implemention you can redefine @app only one time, so @app in backend with be resolved incorrectly.
+Unfortunately, in the current implementation, you can redefine @app only once, so @app in the backend will be resolved incorrectly.
 
